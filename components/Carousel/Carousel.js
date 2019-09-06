@@ -28,22 +28,25 @@ function carousel() {
 
   const img1 = document.createElement('img');
   img1.src = "./assets/carousel/mountains.jpeg";
+  img1.style.display = "block";
 
   const img2 = document.createElement('img');
   img2.src = "./assets/carousel/computer.jpeg";
+  img2.style.display = "block"
 
   const img3 = document.createElement("img");
   img3.src = "./assets/carousel/trees.jpeg";
+  img3.style.display = "block"
 
   const img4 = document.createElement("img");
   img4.src = "./assets/carousel/turntable.jpeg";
+  img4.style.display = "block"
 
   const div2 = document.createElement("div");
   div2.setAttribute('class','right-button');
   div2.textContent = ">";
 
-  div.appendChild(div1, img1, img2, img3, img4, div2);
-  console.log(div)
+  div.append(div1, img1, img2, img3, img4, div2);
   return div;
 }
 
