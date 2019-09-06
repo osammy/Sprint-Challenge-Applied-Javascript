@@ -38,7 +38,7 @@ function handleTabContentDisplay(e) {
     })
 
     cards.forEach(card => {
-      if (topic === card.getAttribute("data-card-topic")) card.style.display = "none";
+      if (topic !== card.getAttribute("data-card-topic")) card.style.display = "none";
       else card.style.display = "block";
     });
 
@@ -49,7 +49,8 @@ function TabCreator(topic) {
   const div = document.createElement("div");
   div.setAttribute("class", "tab");
   div.textContent = topic;
+  topic = topic === "node.js" ? "node" : topic;
   div.setAttribute("data-tab-topic", topic);
-
+  console.log(div)
   return div;
 }

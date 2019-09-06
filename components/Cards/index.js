@@ -51,6 +51,7 @@ function CardCreator(topic,article) {
   div2.append(div2a, span);
 
   div.append(div1, div2);
+//   console.log(div)
 
   return div;
 }
@@ -68,6 +69,13 @@ function handleSuccess(response) {
       cardDiv.appendChild(Card);
     });
   }
+
+//   for (let [topic, articlesInTopic] of Object.entries(articles)) {
+//     articlesInTopic.forEach(article => {
+//       Card = CardCreator(topic,article);
+//       cardDiv.appendChild(Card);
+//     });
+//   }
 
   // let Card;
   // const cardDiv = document.querySelector(".cards-container")
